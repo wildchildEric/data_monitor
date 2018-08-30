@@ -1,0 +1,27 @@
+{{ render "partials/partial1.html"}}
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Dtu ID</th>
+        <th>电话号码</th>
+        <th>最后发送</th>
+        <th>最后接收</th>
+        <th>注册时间</th>
+        <th>最后心跳时间</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .dtus}}
+      <tr>
+        <td>{{.ID}}</td>
+        <td>{{.SimNum}}</td>
+        <td>{{.LastSent}}</td>
+        <td>{{.LastReceived}}</td>
+        <td>{{.RegisteredTime}}</td>
+        <td>{{.LastHeartbeatedTime}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</div>
